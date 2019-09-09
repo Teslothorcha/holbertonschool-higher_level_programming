@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "#!/usr/bin/python3" > exe.py ; echo $PYFILE >> exe.py ; export PYCODE=exe.py ; python "$PYCODE"
