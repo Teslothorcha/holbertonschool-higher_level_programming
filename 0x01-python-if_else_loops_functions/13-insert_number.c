@@ -10,6 +10,8 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *new, *step1 = *head, *step2 = *head;
 	int flag, flagg;
 
+	if (head == NULL)
+		return (NULL);
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
@@ -25,9 +27,7 @@ listint_t *insert_node(listint_t **head, int number)
 			if (number > step1->n)
 				flag = 1;
 			if (number < step1->n)
-			{
 				flagg = 1;
-			}
 			else if (step1->n <= number && step2->n >= number)
 			{
 				step1->next = new;
