@@ -10,6 +10,8 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *new, *step1 = *head, *step2 = *head;
 	int flag, flagg;
 
+	if (head == NULL)
+		return (NULL);
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
@@ -35,15 +37,13 @@ listint_t *insert_node(listint_t **head, int number)
 				flag = 0;
 				break;
 			}
-			step1 = step1->next;
-		}
+			step1 = step1->next; }
 		if (flag == 1)
 			add_nodeint_end(&*head, number);
 		if (flagg == 1)
 		{
 			new->next = *head;
 			*head = new;
-		}
-	}
+		}	}
 	return (*head);
 }
