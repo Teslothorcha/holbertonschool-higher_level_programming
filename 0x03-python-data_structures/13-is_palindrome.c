@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
 	while (auxt && auxh)
 	{
 		if (auxh->n != auxt->n)
-			return(0);
+			return (0);
 		auxh = auxh->next;
 		auxt = auxt->prev;
 	}
