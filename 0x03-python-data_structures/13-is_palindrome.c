@@ -6,13 +6,10 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *auxh, *auxt;
-	int flag = 0;
+	listint_t *auxh = *head, *auxt = *head;
 
 	if (*head == NULL)
 		return (1);
-	auxh = *head;
-	auxt = *head;
 	(*head)->prev = NULL;
 	while (auxt)
 	{
@@ -31,11 +28,9 @@ int is_palindrome(listint_t **head)
 	while (auxt && auxh)
 	{
 		if (auxh->n != auxt->n)
-			flag = 1;
+			return(0);
 		auxh = auxh->next;
 		auxt = auxt->prev;
 	}
-	if (flag == 1)
-		return (0);
 	return (1);
 }
