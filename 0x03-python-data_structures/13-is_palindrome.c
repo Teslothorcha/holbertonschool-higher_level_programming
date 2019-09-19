@@ -16,14 +16,16 @@ int is_palindrome(listint_t **head)
 	(*head)->prev = NULL;
 	while (auxt)
 	{
-		if (auxt->next != NULL)
+		if (auxt->next == NULL)
+		{
+			break;
+		}
+		else
 		{
 			auxt = auxt->next;
 			auxt->prev = auxh;
 			auxh = auxh->next;
 		}
-		else if (auxt->next == NULL)
-			break;
 	}
 	auxh = *head;
 	while (auxt && auxh)
