@@ -1,0 +1,99 @@
+=+=+=+=+=+=+=+=+=+=+=+=+
+0-add_integer.py module
++=+=+=+=+=+=+=+=+=+=+=+=
+>>> add_integer = __import__('0-add_integer').add_integer
+
+= = = =
+case1
+= = = =
+>>> print(add_integer(1, 2))
+3
+
+= = = =
+case 2
+= = = =
+>>> try:
+...	print(add_integer(1, 's'))
+... except Exception as E:
+...     print(E)
+b must be an integer
+
+= = = =
+case 3
+= = = =
+>>> try:
+...	print(add_integer('w', 2))
+... except Exception as E:
+...     print(E)
+a must be an integer
+
+= = = =
+case 4
+= = = =
+>>> try:
+...	print(add_integer(None, 2))
+... except Exception as E:
+...     print(E)
+a must be an integer
+
+= = = =
+case 5
+= = = =
+>>> try:
+...	print(add_integer(2, None))
+... except TypeError as E:
+...     print(E)
+b must be an integer
+
+= = = =
+case 6
+= = = =
+>>> try:
+...	print(add_integer(2))
+... except TypeError as E:
+...     print(E)
+100
+
+= = = =
+case 7
+= = = =
+>>> try:
+...	print(add_integer(3.4, 2))
+... except TypeError as E:
+...     print(E)
+5
+
+= = = =
+case 8
+= = = =
+>>> try:
+...	print(add_integer(3.4, 7.4))
+... except TypeError as E:
+...     print(E)
+10
+
+
+= = = =
+case 9
+= = = =
+>>> try:
+...	print(add_integer(3.4, "huhu"))
+... except TypeError as E:
+...     print(E)
+b must be an integer
+
+= = = =
+case 9
+= = = =
+>>> print(add_integer(None, None)) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+= = = =
+case 9
+= = = =
+>>> print(add_integer(2, None)) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: b must be an integer

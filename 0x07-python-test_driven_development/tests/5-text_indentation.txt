@@ -1,0 +1,60 @@
+=+=+=+=+=+=+=+=+=+=+=+=+
+5-text_indentation.py
++=+=+=+=+=+=+=+=+=+=+=+=
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+=+=+=+=+=+=+=+=+
+=+=+  =+=+  =+=+
+=+=+  =+=+  =+=+
+=+=+=+=+=+=+=+=+
+=+=+=+=  +=+=+=+
+=+=+=+=  +=+=+=+
+=+=+=+=+=+=+=+=+
+
+= = = =
+case1
+= = = =
+>>> s = "hdhdhd? djdjdjjd. jdjdjjd.dd"
+>>> text_indentation(s)
+hdhdhd
+<BLANKLINE>
+djdjdjjd
+<BLANKLINE>
+jdjdjjd
+<BLANKLINE>
+dd
+
+
+= = = =
+case2
+= = = =
+>>> s = "  hdhdhd? djdjdjjd. jdjdjjd.dd  "
+>>> text_indentation(s)
+hdhdhd
+<BLANKLINE>
+djdjdjjd
+<BLANKLINE>
+jdjdjjd
+<BLANKLINE>
+dd
+
+
+= = = =
+case3
+= = = =
+>>> try:
+...    text_indentation(2)
+... except Exception as E:
+...    print(E)
+text must be a string
+
+
+= = = =
+case4
+= = = =
+>>> try:
+...    text_indentation(None)
+... except Exception as E:
+...    print(E)
+text must be a string
