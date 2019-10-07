@@ -13,6 +13,9 @@ def matrix_divided(matrix, div):
     msg_1 = "matrix must be a matrix (list of lists) of integers/floats"
     msg_2 = "Each row of the matrix must have the same size"
     msg_3 = "division by zero"
+    msg_4 = "div must be a number"
+    if not isinstance(div, int):
+        raise TypeError(msg_4)
     if not matrix or matrix is None:
         raise TypeError(msg_1)
     if div == 0:
