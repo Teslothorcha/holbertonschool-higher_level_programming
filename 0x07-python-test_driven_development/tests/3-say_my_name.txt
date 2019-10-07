@@ -40,8 +40,7 @@ last_name must be a string
 = = = =
 case5
 = = = =
->>> try:
-...    say_my_name("", "")
-... except Exception as E:
-...    print(E)
-My name is  
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
