@@ -18,11 +18,8 @@ def text_indentation(text):
             if ord(ident) == 46:
                 print(".", end="")
                 print()
-                print()
             if ord(ident) == 63:
                 print("?", end="")
                 print()
-                print()
         else:
             print("{:s}".format(ident), end="")
-    print()
