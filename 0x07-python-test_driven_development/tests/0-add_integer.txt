@@ -97,3 +97,18 @@ case 9
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
+= = = =
+case 10
+= = = =
+>>> print(add_integer(0.111111111111111111111, 2))
+2
+
+= = = =
+case 10
+= = = =
+>>> try:
+...    print(add_integer(str("nan"), 2))
+... except Exception as E:
+...    print(E)
+a must be an integer
