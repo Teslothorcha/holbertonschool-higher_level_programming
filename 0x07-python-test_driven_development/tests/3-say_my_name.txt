@@ -36,3 +36,12 @@ case4
 ... except Exception as E:
 ...    print(E)
 last_name must be a string
+
+= = = =
+case5
+= = = =
+>>> try:
+...    say_my_name(None, None)
+... except Exception as E:
+...    print(E)
+first_name must be a string
