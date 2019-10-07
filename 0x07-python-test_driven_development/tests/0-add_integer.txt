@@ -137,3 +137,8 @@ case 14
 ...    print(E)
 a must be an integer
 
+= = = =
+case 15
+= = = =
+>>> print(add_integer(True, True))
+2
