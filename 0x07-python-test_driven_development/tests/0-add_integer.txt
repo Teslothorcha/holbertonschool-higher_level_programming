@@ -118,3 +118,22 @@ case 12
 ... except Exception as E:
 ...    print(E)
 a must be an integer
+
+= = = =
+case 13
+= = = =
+>>> try:
+...    print(add_integer(None))
+... except Exception as E:
+...    print(E)
+a must be an integer
+
+= = = =
+case 14
+= = = =
+>>> try:
+...    print(add_integer(None, None))
+... except Exception as E:
+...    print(E)
+a must be an integer
+
