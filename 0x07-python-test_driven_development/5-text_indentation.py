@@ -25,3 +25,4 @@ def text_indentation(text):
                 print()
         else:
             print("{:s}".format(ident), end="")
+    print()
