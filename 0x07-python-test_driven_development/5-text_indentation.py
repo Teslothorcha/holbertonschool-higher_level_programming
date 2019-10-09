@@ -12,24 +12,24 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    l = len(text)
     text = text.strip()
-    for i in range(0, l):
-        if ord(text[i]) == 46 or ord(text[i]) == 63 or ord(text[i]) == 58:
-            if ord(text[i]) == 46:
-                print(".", end="")
-                print()
-                print()
-                i += 1
-            if ord(text[i]) == 63:
-                print("?", end="")
-                print()
-                print()
-                i += 1
-            if ord(text[i]) == 58:
-                print(":", end="")
-                print()
-                print()
-                i += 1
-        else:
-            print("{:s}".format(text[i]), end="")
+    l = len(text)
+    id = 0
+    while id in range(l):
+        if text[id] == '?' or text[id] == ':' or text[id] == '.':
+            if text[id] == '?':
+                print('?')
+            if text[id] == ':':
+                print(':')
+            if text[id] == '.':
+                print('.')
+            print()
+            id += 1
+            for idd in range(id, l):
+                if text[idd] == ' ':
+                    idd += 1
+                    id = idd
+                if text[idd] != ' ':
+                    break
+        print(text[id], end='')
+        id += 1
