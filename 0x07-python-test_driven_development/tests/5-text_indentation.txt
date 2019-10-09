@@ -17,11 +17,11 @@ case1
 = = = =
 >>> s = "hdhdhd? djdjdjjd. jdjdjjd.dd"
 >>> text_indentation(s)
-hdhdhd
+hdhdhd?
 <BLANKLINE>
-djdjdjjd
+djdjdjjd.
 <BLANKLINE>
-jdjdjjd
+jdjdjjd.
 <BLANKLINE>
 dd
 
@@ -31,11 +31,11 @@ case2
 = = = =
 >>> s = "  hdhdhd? djdjdjjd. jdjdjjd.dd  "
 >>> text_indentation(s)
-hdhdhd
+hdhdhd?
 <BLANKLINE>
-djdjdjjd
+djdjdjjd.
 <BLANKLINE>
-jdjdjjd
+jdjdjjd.
 <BLANKLINE>
 dd
 
@@ -58,3 +58,12 @@ case4
 ... except Exception as E:
 ...    print(E)
 text must be a string
+
+
+= = = =
+case5
+= = = =
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
