@@ -97,3 +97,48 @@ case 9
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
+= = = =
+case 10
+= = = =
+>>> print(add_integer(0.111111111111111111111, 2))
+2
+
+= = = =
+case 11
+= = = =
+>>> print(add_integer(1, 2.11))
+3
+
+= = = =
+case 12
+= = = =
+>>> try:
+...    print(add_integer(str("nan"), 2))
+... except Exception as E:
+...    print(E)
+a must be an integer
+
+= = = =
+case 13
+= = = =
+>>> try:
+...    print(add_integer(None))
+... except Exception as E:
+...    print(E)
+a must be an integer
+
+= = = =
+case 14
+= = = =
+>>> try:
+...    print(add_integer(None, None))
+... except Exception as E:
+...    print(E)
+a must be an integer
+
+= = = =
+case 15
+= = = =
+>>> print(add_integer(True, True))
+2
