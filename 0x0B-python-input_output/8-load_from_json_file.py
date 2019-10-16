@@ -4,4 +4,4 @@ import json
 
 def load_from_json_file(filename):
         with open(filename, "r") as fi:
-                return json.loads(fi)
+                return json.load(fi)
