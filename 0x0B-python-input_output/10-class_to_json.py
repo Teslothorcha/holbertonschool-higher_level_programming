@@ -2,4 +2,4 @@
 
 
 def class_to_json(obj):
-        return type(obj).__dict__
+        return obj.__dict__
