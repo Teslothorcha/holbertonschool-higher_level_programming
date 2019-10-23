@@ -59,6 +59,8 @@ class Base():
     @classmethod
     def load_from_file(cls):
         """loads stringsinto objects"""
+        if not os.path.exists(cls.__name__ + ".json") is:
+            return []
         if os.path.exists(cls.__name__ + ".json") is True:
             with open(cls.__name__ + ".json", 'r', encoding="utf-8") as f:
                 txt = f.read()
