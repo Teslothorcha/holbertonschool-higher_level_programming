@@ -5,6 +5,7 @@ Base class
 import json
 import os
 
+
 class Base():
     """Base
     class
@@ -59,7 +60,7 @@ class Base():
     def load_from_file(cls):
         """loads stringsinto objects"""
         if os.path.exists(cls.__name__ + ".json") is True:
-            with open(cls.__name__ + ".json", 'r',encoding="utf-8") as f:
+            with open(cls.__name__ + ".json", 'r', encoding="utf-8") as f:
                 txt = f.read()
                 if not txt or txt is None or txt == "[]":
                     return []
