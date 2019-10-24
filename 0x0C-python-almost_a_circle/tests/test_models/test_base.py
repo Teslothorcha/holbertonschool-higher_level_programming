@@ -15,7 +15,7 @@ class BaseTest(unittest.TestCase):
     """
 
     def setUp(self):
+        """Tests for the Base class docstring"""
         Base._Base__nb_objects = 0
 
-    def test_class_docstring(self):
-        """Tests for the Base class docstring"""
+        
