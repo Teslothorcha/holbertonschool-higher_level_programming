@@ -10,8 +10,8 @@ def connect_database_3(usr, paswd, dt_name, st_name):
     db = MySQLdb.connect(host='localhost', user=usr, passwd=paswd,
                          db=dt_name, port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %(st_name)s ORDER BY id ASC"
-                , {'st_name': st_name})
+    cur.execute("SELECT * FROM states WHERE name = %(st_name)s\
+    ORDER BY id ASC", {'st_name': st_name})
     res = cur.fetchall()
     for state in res:
         print(state)
