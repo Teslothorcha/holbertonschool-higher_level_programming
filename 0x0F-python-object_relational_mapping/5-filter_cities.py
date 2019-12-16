@@ -12,8 +12,8 @@ def connect_database_5(usr, paswd, dt_name, st_name):
                          db=dt_name, port=3306)
     cur = db.cursor()
     cur.execute("SELECT c.name FROM cities c\
-    JOIN states s ON s.id = c.state_id WHERE s.name = '{}'\
-    ORDER BY c.id ASC".format(st_name))
+    JOIN states s ON s.id = c.state_id WHERE s.name = %(st_name)s\
+    ORDER BY c.id ASC", {'st_name': st_name})
     res = cur.fetchall()
     for state in res:
         if times < len(res):
