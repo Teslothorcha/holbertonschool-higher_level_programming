@@ -14,7 +14,8 @@ def connect_database_2(usr, paswd, dt_name, st_name):
                 .format(st_name))
     res = cur.fetchall()
     for state in res:
-        print(state)
+        if state[1] == st_name:
+            print(state)
     cur.close()
     db.close()
 
@@ -24,6 +25,7 @@ if __name__ == "__main__":
     main is calling it"""
     try:
         if sys.argv[4]:
-            connect_database_2(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+            connect_database_2(sys.argv[1], sys.argv[2], sys.argv[3],
+                               sys.argv[4])
     except:
         pass
