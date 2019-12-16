@@ -15,7 +15,6 @@ def connect_database_5(usr, paswd, dt_name, st_name):
     JOIN states s ON s.id = c.state_id WHERE s.name = '{}'\
     ORDER BY c.id ASC".format(st_name))
     res = cur.fetchall()
-    print(res)
     for state in res:
         if times < len(res):
             print("{}, ".format(state[0]), end="")
