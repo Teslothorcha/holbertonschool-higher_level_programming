@@ -10,11 +10,11 @@ def connect_database_1(usr, paswd, dt_name):
     db = MySQLdb.connect(host='localhost', user=usr, passwd=paswd,
                          db=dt_name, port=3306)
     cur = db.cursor()
-    cur.execute('SELECT * FROM states WHERE name LIKE "N%"\
-    ORDER BY id ASC')
+    cur.execute('SELECT * FROM states ORDER BY id ASC')
     res = cur.fetchall()
     for state in res:
-        print(state)
+        if state[1][0] == 'N':
+            print(state)
     cur.close()
     db.close()
 
