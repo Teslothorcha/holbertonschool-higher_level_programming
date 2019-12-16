@@ -24,7 +24,7 @@ if __name__ == "__main__":
                                             .order_by(City.id).all()
 
             for a, b in que:
-                print("{}: ({}) {}".format(a.name, b.id, a.name))
+                print("{}: ({}) {}".format(a.name, b.id, b.name))
             session.close()
     except:
         pass
