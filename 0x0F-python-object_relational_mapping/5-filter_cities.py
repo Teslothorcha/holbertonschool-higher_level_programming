@@ -19,8 +19,9 @@ def connect_database_5(usr, paswd, dt_name, st_name):
         if times < len(res):
             print("{}, ".format(state[0]), end="")
         else:
-            print("{}".format(state[0]))
+            print("{}".format(state[0]), end="")
         times += 1
+    print()
     cur.close()
     db.close()
 
