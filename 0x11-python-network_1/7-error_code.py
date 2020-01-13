@@ -5,4 +5,7 @@ from sys import argv
 
 if __name__ == "__main__":
     r = requests.post(argv[1])
-    print(r.status_code)
+    if r.raise_for_status():
+        print(r.text):
+    else:
+        print("Error code: {}".format(r.status_code))
