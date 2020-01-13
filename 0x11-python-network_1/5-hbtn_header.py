@@ -8,4 +8,4 @@ if __name__ == "__main__":
     head = r.headers
     for var in head:
         if var == 'X-Request-Id':
-            print(head[var])
+            print(head['X-Request-Id'])
