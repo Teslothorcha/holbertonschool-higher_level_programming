@@ -11,7 +11,7 @@ if __name__ == "__main__":
         q = ""
     r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
-        dic = res.json()
+        dic = r.json()
         if not dic:
             print("No result")
         else:
