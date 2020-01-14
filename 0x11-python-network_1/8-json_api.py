@@ -5,10 +5,10 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    if argv[1]:
-        var = argv[1]
+    if len(argv) == 2:
+        q = argv[1]
     else:
-        var = ""
+        q = ""
     r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
         dic = res.json()
