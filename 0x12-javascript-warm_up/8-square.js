@@ -5,7 +5,7 @@ if (parseInt(process.argv.slice(2)[0])) {
     let i = parseInt(process.argv.slice(2)[0]);
     let j = i;
     while (i) {
-      msg += 'x';
+      msg += 'X';
       i -= 1;
     }
     while (j) {
