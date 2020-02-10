@@ -5,20 +5,21 @@ module.exports = class Rectangle {
       if (w > 0 && h > 0) {
         this.width = w;
         this.height = h;
-        this.print = function () {
-          let msg = '';
-          let i = w;
-          let j = h;
-          while (i) {
-            msg += 'X';
-            i -= 1;
-          }
-          while (j) {
-            console.log(msg);
-            j -= 1;
-          }
-        };
       }
+    }
+  }
+
+  print () {
+    let msg = '';
+    let i = this.width;
+    let j = this.height;
+    while (i) {
+      msg += 'X';
+      i -= 1;
+    }
+    while (j) {
+      console.log(msg);
+      j -= 1;
     }
   }
 };
