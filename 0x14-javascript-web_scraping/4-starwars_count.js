@@ -8,8 +8,10 @@ request.get(url, function (error, response, body) {
   let cuenta = 0;
   const results = JSON.parse(body).results;
   for (let i = 0; i < JSON.parse(body).count; i++) {
-    if (results[i].characters.includes('https://swapi.co/api/people/18/')) {
-      cuenta += 1;
+    for (let j = 0; j < results[i].characters.length; j++) {
+      if (results[i].characters[j].includes('/18/')) {
+        cuenta += 1;
+      }
     }
   }
   console.log(cuenta);
