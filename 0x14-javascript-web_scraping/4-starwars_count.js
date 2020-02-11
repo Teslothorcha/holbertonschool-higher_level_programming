@@ -5,5 +5,12 @@ request.get(url, function (error, response, body) {
   if (error) {
     return console.log(error.toString());
   }
-  console.log('3');
+  let cuenta = 0;
+  const results = JSON.parse(body).results;
+  for (let i = 0; i < JSON.parse(body).count; i++) {
+    if (results[i].characters.includes('https://swapi.co/api/people/18/')) {
+      cuenta += 1;
+    }
+  }
+  console.log(cuenta);
 });
